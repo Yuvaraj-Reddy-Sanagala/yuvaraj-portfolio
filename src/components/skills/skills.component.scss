@@ -1,0 +1,49 @@
+.skills {
+  display: flex;
+  padding: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+
+  .img_6 {
+    height: 450px;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: #ffffff;
+  }
+
+
+  .skills-accordion {
+    max-width: 900px;
+    max-height: 450px;
+    overflow: scroll;
+    padding-right: 20px;
+
+
+    .skill-panel {
+      border-radius: 6px;
+      transition: box-shadow 0.3s;
+      margin-bottom: 20px;
+      padding: 5px;
+      background-color: #ffffff;
+
+      mat-panel-title {
+        text-align: center;
+        display: flex;
+        width:100%;
+        justify-content: center;
+      }
+    }
+
+    p {
+      line-height: 2;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .skills {
+    padding:80px;
+  }
+}

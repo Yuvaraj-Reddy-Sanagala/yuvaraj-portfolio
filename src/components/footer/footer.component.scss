@@ -1,0 +1,41 @@
+.social-icons-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0% 30%;
+  
+    .icon {
+      font-size: medium;
+      text-decoration: none;
+      font-weight: bolder;
+      border-radius: 5px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+  
+      span {
+        padding-left: 10px;
+      }
+  
+      &:hover {
+        transform: scale(1.2);
+      }
+  
+      &.email {
+        color: black;
+      }
+  
+      &.phone {
+        color: #4caf50;
+      }
+  
+      &.github {
+        color: black;
+      }
+  
+      &.linkedin {
+        color: #0077b5;
+      }
+    }
+  }
+  

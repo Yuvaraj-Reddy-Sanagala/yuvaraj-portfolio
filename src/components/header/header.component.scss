@@ -1,0 +1,31 @@
+.navbar-container {
+    padding: 1% 0% 1% 0%;
+    height:20%;
+    background-color: #04417d;
+
+    .element {
+        display:flex;
+        justify-content: center;
+        font-size: x-large;
+        font-weight: bolder;
+        text-decoration: none;
+        margin-bottom: 25px;
+        color:#ffffff;
+    }
+
+    .navbar-elements {
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        background-color: #ffffff;
+        padding:20px 150px;
+
+        .navbar-element a{
+            text-decoration: none;
+            font-size: larger;
+            font-weight: bolder;
+            color:black;
+        }
+    }
+
+}
