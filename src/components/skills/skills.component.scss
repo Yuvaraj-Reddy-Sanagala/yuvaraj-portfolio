@@ -1,49 +1,97 @@
-.skills {
+.skills-section {
   display: flex;
-  padding: 50px;
   justify-content: space-evenly;
   align-items: center;
-  gap: 20px;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  gap: 40px;
 
-  .img_6 {
-    height: 450px;
-    padding: 10px;
-    border-radius: 100px;
-    background-color: #ffffff;
+  .skills-image {
+    height: 500px;
+    filter: drop-shadow(0 0 6px #ff6f00);
+    border-radius: 20px;
   }
 
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    overflow-y: scroll;
+  }
 
-  .skills-accordion {
-    max-width: 900px;
-    max-height: 450px;
-    overflow: scroll;
-    padding-right: 20px;
+  .skill-card {
+    background: #2c2c2c;
+    color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(255, 111, 0, 0.2);
+    transition: transform 0.3s ease;
 
-
-    .skill-panel {
-      border-radius: 6px;
-      transition: box-shadow 0.3s;
-      margin-bottom: 20px;
-      padding: 5px;
-      background-color: #ffffff;
-
-      mat-panel-title {
-        text-align: center;
-        display: flex;
-        width:100%;
-        justify-content: center;
-      }
+    &:hover {
+      transform: translateY(-5px);
     }
 
-    p {
-      line-height: 2;
-      font-size: 1.1rem;
+    mat-card-title {
+      color: #ff6f00;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .skill-line {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #f5f5f5;
+      padding: 0 16px 16px 16px;
+      word-break: break-word;
     }
   }
-}
 
-@media (max-width: 1440px) {
-  .skills {
-    padding:80px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 20px;
+
+    .skills-image {
+      height: auto;
+      max-width: 80%;
+      max-height: 400px;
+    }
+
+    .skills-grid {
+      height: auto;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    flex-direction: column;
+    padding: 30px;
+
+    .skills-image {
+      height: auto;
+      max-height: 500px;
+      max-width: 100%;
+    }
+
+    .skills-grid {
+      height: auto;
+      max-height: 450px;
+      overflow-y: auto;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    flex-direction: row;
+
+    .skills-image {
+      height: 500px;
+    }
+
+    .skills-grid {
+      height: 500px;
+    }
   }
 }

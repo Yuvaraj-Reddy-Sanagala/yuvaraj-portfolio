@@ -6,9 +6,30 @@ import { HomeComponent } from '../components/home/home.component';
 import { SkillsComponent } from '../components/skills/skills.component';
 
 export const routes: Routes = [
-    {path: "", component: HomeComponent},
-    {path: "Experience", component: ExperienceComponent},
-    {path: "Skills", component: SkillsComponent},
-    {path: "Projects", component: ProjectsComponent},
-    {path: "Education", component: EducationComponent}
+  {
+    path: '',
+    component: HomeComponent,
+    data: { animation: 'HomePage' }
+  },
+  {
+    path: 'Experience',
+    component: ExperienceComponent,
+    data: { animation: 'ExperiencePage' }
+  },
+  {
+    path: 'Skills',
+    component: SkillsComponent,
+    data: { animation: 'SkillsPage' }
+  },
+  {
+    path: 'Projects',
+    component: ProjectsComponent,
+    data: { animation: 'ProjectsPage' }
+  },
+  {
+    path: 'Education',
+    component: EducationComponent,
+    data: { animation: 'EducationPage' }
+  }
 ];
+

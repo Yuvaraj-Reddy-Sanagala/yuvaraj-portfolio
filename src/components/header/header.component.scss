@@ -1,31 +1,112 @@
 .navbar-container {
-    padding: 1% 0% 1% 0%;
-    height:20%;
-    background-color: #04417d;
+  padding: 1rem 0;
+  border-bottom: 4px solid #2C2C2C;
+  background-color: #1A1A1A;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    .element {
-        display:flex;
-        justify-content: center;
-        font-size: x-large;
-        font-weight: bolder;
+  .element {
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+  }
+
+  .menu-icon {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 2000;
+
+    svg {
+      fill: #FFFFFF;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .navbar-elements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    background: #1A1A1A;
+    padding: 1rem 3rem;
+    margin: 0 2rem;
+    border-radius: 2.5rem;
+    transition: all 0.3s ease-in-out;
+    z-index: 1500;
+
+    .navbar-element {
+      margin: 0 1rem;
+
+      a {
         text-decoration: none;
-        margin-bottom: 25px;
-        color:#ffffff;
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 0.5rem 0.75rem;
+        color: #FFFFFF;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #FF6F00;
+          background-color: rgba(255, 111, 0, 0.1);
+        }
+
+        &.active {
+          color: #FF6F00;
+          border-bottom: 2px solid #FF6F00;
+        }
+      }
+    }
+
+    &.open {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
     }
 
     .navbar-elements {
-        display: flex;
-        justify-content: space-evenly;
-        list-style-type: none;
-        background-color: #ffffff;
-        padding:20px 150px;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 50%;
+      width: 100px;
+      background-color: #1A1A1A;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+      margin: 0;
+      border-radius: 0;
 
-        .navbar-element a{
-            text-decoration: none;
-            font-size: larger;
-            font-weight: bolder;
-            color:black;
+      &.open {
+        transform: translateX(0);
+      }
+
+      .navbar-element {
+        width: 100%;
+        margin: 1.25rem 0;
+
+        a {
+          display: block;
+          width: 100%;
+          font-size: 1.1rem;
+          padding: 0.75rem 1rem;
         }
+      }
     }
-
+  }
 }

@@ -1,7 +1,12 @@
-<app-header></app-header>
-<body>
-  <div class="blur-overlay">
-    <router-outlet></router-outlet>
+<div class="app-container">
+  <app-header></app-header>
+
+  <div class="blur-overlay" [@fadeAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
-</body>
-<app-footer></app-footer>
+
+  <app-footer></app-footer>
+</div>
+
+
+

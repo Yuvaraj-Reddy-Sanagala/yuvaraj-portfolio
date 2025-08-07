@@ -1,63 +1,138 @@
-.experience  {
-    height:70vh;
-    overflow-y: scroll;
+.experience {
+  height: 70vh;
+  overflow-y: scroll;
 
-    .experience_1,.experience_2 {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding-bottom: 50px;
-    
-        .experience-container {
-            display: block;
-            padding:20px;
-            border-radius: 50px;
-    
-            .experience-head {
-                text-align: center;
-                color: #ffffff
-            }
-    
-            .experience-body {
-    
-                line-height: 2;
-    
-                p {
-                    background-color: #ffffff;
-                    width: 1200px;
-                    padding:10px;
-                    font-size: 1.1rem;
-                    border-radius: 20px;
-                    transition: transform 0.5s ease;
-                }
-    
-                p:hover {
-                    transform: scaleX(1.1);
-              }
-              @media  (max-width:1440px) {
-                p{
-                    width: 800px;
-                    font-size: 1rem;
-                }
-                
-            }
-            }
-        }
-    
-        .img_2, .img_3 {
-            margin-top: 80px;
-            height:450px;
-            padding:10px;
-            border-radius: 100px;
-            background-color: #ffffff;
-        }
+  .experience-grid-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 60px;
 
-        @media  (max-width:1440px) {
-            .img_2,.img_3 {
-                height:500px;
-            }
-            
+    .experience-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      height: fit-content;
+      border: 1px solid #2c2c2c;
+      border-radius: 20px;
+      padding: 25px;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 111, 0, 0.2);
+      width: 1000px;
+      transition: transform 0.3s ease;
+
+      h2 {
+        color: #ff6f00;
+        margin-bottom: 5px;
+      }
+
+      h3 {
+        color: #f5f5f5;
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #ccc;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 8px;
+          line-height: 1.5;
+
+          strong {
+            color: #ffa733;
+          }
         }
-    
-    }    
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(255, 111, 0, 0.4);
+      }
+    }
+
+    .Img_2,
+    .Img_3 {
+      height: 500px;
+      max-height: 500px;
+      filter: drop-shadow(0 0 6px #ff6f00);
+    }
+  }
+
+  // Mobile (max-width: 600px)
+  @media (max-width: 600px) {
+    .experience-grid-row {
+      flex-direction: column;
+      padding: 20px;
+      justify-content:center;
+      align-items: center;
+
+      .experience-card {
+        width: 85%;
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      .Img_2,
+      .Img_3 {
+        height: auto;
+        max-height: 300px;
+        width: auto;
+        max-width: 250px;
+        margin-bottom: 5%;
+      }
+    }
+
+    // ✅ Reverse flex ONLY for the first row
+    .experience-grid-row:first-of-type {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // Tablet (601px to 1024px)
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .experience-grid-row {
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+
+      .experience-card {
+        width: 90%;
+        padding: 25px;
+        font-size: 15px;
+      }
+
+      .Img_2,
+      .Img_3 {
+        height: auto;
+        max-height: 400px;
+        margin-bottom: 10px;
+        margin-top: 25px;
+      }
+    }
+
+    .experience-grid-row:first-of-type {
+      flex-direction: column-reverse;
+    }
+  }
+
+
+  @media (min-width: 1025px) {
+    .experience-grid-row {
+      flex-direction: row;
+      padding: 60px;
+
+      .experience-card {
+        width: 1000px;
+      }
+
+      .Img_2,
+      .Img_3 {
+        height: 500px;
+      }
+    }
+  }
 }

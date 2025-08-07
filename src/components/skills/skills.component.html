@@ -1,20 +1,19 @@
-<div class="skills">
-  <img src="skillsImage.png" alt="chibi style image" class="img_6" />
+<div class="skills-section">
+  <img src="skillsImage.png" alt="Skills Image" class="skills-image" />
 
-  <mat-accordion class="skills-accordion">
-    <mat-expansion-panel *ngFor="let group of skillGroups" class="skill-panel">
-      <mat-expansion-panel-header class="skill-header">
-        <mat-panel-title>
-          <h3 class="skill-title">{{ group.title }}</h3>
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-  
-      <p class="skill-list">
-        <ng-container *ngFor="let skill of group.skills; let last = last">
-          {{ skill }}<span *ngIf="!last"> | </span>
-        </ng-container>
-      </p>
-    </mat-expansion-panel>
-  </mat-accordion>
-  
+  <div class="skills-grid">
+    <mat-card *ngFor="let group of skillGroups" class="skill-card">
+      <mat-card-header>
+        <mat-card-title>{{ group.title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p class="skill-line">
+          <ng-container *ngFor="let skill of group.skills; let last = last">
+            {{ skill }}<span *ngIf="!last"> | </span>
+          </ng-container>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

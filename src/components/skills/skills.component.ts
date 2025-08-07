@@ -1,120 +1,48 @@
 import { Component } from '@angular/core';
-import { SkillGroup } from './skill-group.model';
 import { CommonModule } from '@angular/common';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule,MatExpansionModule],
+  standalone: true,
+  imports: [CommonModule, MatCardModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  skillGroups: SkillGroup[] = [
+  skillGroups = [
     {
-      title: 'Programming & Software Development',
-      skills: [
-        'Python',
-        'R',
-        'Java',
-        'SQL',
-        'Bash',
-        'Object-Oriented Programming (OOP)',
-        'Multi-threading',
-        'Parallel Computing',
-        'Agile/Scrum Methodologies',
-        'React',
-        'Angular',
-      ],
+      title: '🧑‍💻 Programming & Software Development',
+      skills: ['Python', 'R', 'Java', 'SQL', 'OOP', 'Angular']
     },
     {
-      title: 'Machine Learning & Frameworks',
-      skills: [
-        'TensorFlow',
-        'Keras',
-        'PyTorch',
-        'Scikit-learn',
-        'XGBoost',
-        'LightGBM',
-        'CatBoost',
-        'Hugging Face',
-        'CNN',
-        'RNN',
-        'Transformers',
-        'GANs',
-        'Fine-tuning',
-        'Transfer Learning',
-        'LoRA',
-      ],
+      title: '🤖 Machine Learning & Frameworks',
+      skills: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'LoRA']
     },
     {
-      title: 'Data Science & Analysis',
-      skills: [
-        'Pandas',
-        'NumPy',
-        'SciPy',
-        'Statsmodels',
-        'Data Cleaning',
-        'Normalization',
-        'Feature Engineering & Selection',
-        'Matplotlib',
-        'Seaborn',
-        'Plotly',
-      ],
+      title: '📊 Data Science & Analysis',
+      skills: ['Pandas', 'NumPy', 'Seaborn']
     },
     {
-      title: 'Cloud & Big Data',
-      skills: [
-        'AWS: SageMaker, Lambda, EC2',
-        'Azure: ML Studio, Azure Databricks',
-        'Apache Spark',
-        'Kafka',
-        'Hadoop',
-      ],
+      title: '☁️ Cloud & Big Data',
+      skills: ['AWS', 'Azure', 'Databricks', 'Spark']
     },
     {
-      title: 'Model Deployment & MLOps',
-      skills: [
-        'Docker',
-        'Kubernetes',
-        'MLflow',
-        'Flask',
-        'Django (API Development)',
-        'Git',
-        'GitHub',
-        'GitLab',
-        'Hyperparameter Tuning: Grid Search, Randomized Search, Bayesian Optimization',
-      ],
+      title: '🚀 Model Deployment & MLOps',
+      skills: ['Docker', 'Kubernetes', 'MLflow']
     },
     {
-      title: 'NLP (Natural Language Processing)',
-      skills: [
-        'Text Preprocessing',
-        'Sentiment Analysis',
-        'Named Entity Recognition (NER)',
-        'spaCy',
-        'NLTK',
-      ],
+      title: '📝 NLP (Natural Language Processing)',
+      skills: ['NER', 'spaCy', 'NLTK']
     },
     {
-      title: 'Computer Vision',
-      skills: [
-        'Image Classification',
-        'Object Detection',
-        'Semantic Segmentation',
-        'YOLO',
-      ],
+      title: '🖼️ Computer Vision',
+      skills: ['YOLO', 'Semantic Segmentation']
     },
     {
-      title: 'LLMs & Retrieval-Augmented Generation (RAG)',
-      skills: [
-        'RAG',
-        'FAISS (Vector DBs)',
-        'LangChain',
-        'Prompt Engineering',
-        'Context-aware Retrieval',
-        'LLM Integration',
-      ],
-    },
+      title: '📚 LLMs & RAG',
+      skills: ['LangChain', 'FAISS', 'Prompt Engineering']
+    }
   ];
+  
 }

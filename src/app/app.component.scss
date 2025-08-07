@@ -1,5 +1,13 @@
-body {
-    min-height:75vh;
-    background-color: #04417d;
-    margin-bottom: 12px;
-}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  .blur-overlay {
+    flex: 1;
+    padding: 20px;
+  }
+  
